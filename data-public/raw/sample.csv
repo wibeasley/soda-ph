@@ -1,0 +1,28 @@
+substrate,sample_index,duration_min,temp_c,ph
+Coke,1,0,21,2.9
+Coke,1,20,20,2.5
+Coke,1,40,20,2.4
+Coke,2,0,20,2.7
+Coke,2,20,20,2.5
+Coke,2,40,19,2.3
+Coke,3,0,21,2.6
+Coke,3,20,20,2.5
+Coke,3,40,25,2.9
+Pepsi,1,0,20,2.7
+Pepsi,1,20,21,2.5
+Pepsi,1,40,24,2.8
+Pepsi,2,0,20,2.4
+Pepsi,2,20,20,2.3
+Pepsi,2,40,21,2.9
+Pepsi,3,0,20,2.5
+Pepsi,3,20,20,2.4
+Pepsi,3,40,20,2.7
+Dr. Pepper,1,0,20,2.5
+Dr. Pepper,1,20,19,2.9
+Dr. Pepper,1,40,21,2.5
+Dr. Pepper,2,0,20,2.4
+Dr. Pepper,2,20,20,2.7
+Dr. Pepper,2,40,20,2.5
+Dr. Pepper,3,0,19,2.3
+Dr. Pepper,3,20,21,2.6
+Dr. Pepper,3,40,20,2.5
