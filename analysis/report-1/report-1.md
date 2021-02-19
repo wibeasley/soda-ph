@@ -43,7 +43,7 @@ Summary {.tabset .tabset-fade .tabset-pills}
 Notes
 ---------------------------------------------------------------------------
 
-1. The current report covers 27 sampling points, with 3 unique values for `substrate` and 9 cans.
+1. The current report covers 51 sampling points, with 3 unique values for `substrate` and 9 cans.
 
 
 
@@ -172,4 +172,4 @@ For the sake of documentation and reproducibility, the current report was render
 
 
 
-Report rendered by wibeasley at 2021-02-18, 21:06 -0600 in 1 seconds.
+Report rendered by wibeasley at 2021-02-18, 21:14 -0600 in 1 seconds.
