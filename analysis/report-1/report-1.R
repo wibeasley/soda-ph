@@ -46,7 +46,8 @@ ds <-
   ds %>%
   dplyr::mutate(
     can = paste(substrate, can_index)
-  )
+  ) %>%
+  dplyr::filter(substrate != "Dr. Pepper")
 #
 # checkmate::assert_factor(   ds$forward_gear_count_f         , any.missing=F                           )
 # checkmate::assert_factor(   ds$carburetor_count_f           , any.missing=F                           )
@@ -65,16 +66,22 @@ ds <-
 
 # ---- spaghetti ------------------------------------------------------------
 ggplot(ds, aes(x=duration_min, y=ph, group=can, color=substrate, label=can_index)) +
-  # geom_smooth(method="loess", span=2) +
-  geom_line(alpha = .6) +
-  geom_text(alpha = .6) +
+  geom_smooth(aes(group = substrate),  method="loess", span=2, se = F) +
+  geom_line(alpha = .4) +
+  geom_text(alpha = .4, show.legend = FALSE) +
   scale_color_manual(values = palette_dark) +
-  theme_light() +
+  guides(color = guide_legend(override.aes = list(alpha = 1))) +
+  theme_minimal() +
   theme(axis.ticks = element_blank()) +
+  theme(legend.position = c(1, 1)) +
+  theme(legend.justification = c(1, 1)) +
+  theme(legend.background  = element_blank()) +
   labs(
-    x = "Duration (min)"
+    title   = "pH over Time",
+    x       = "Duration (min)",
+    y       = "pH",
+    color   = NULL
   )
-
 
 
 

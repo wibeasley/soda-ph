@@ -43,7 +43,7 @@ Summary {.tabset .tabset-fade .tabset-pills}
 Notes
 ---------------------------------------------------------------------------
 
-1. The current report covers 51 sampling points, with 3 unique values for `substrate` and 9 cans.
+1. The current report covers 42 sampling points, with 2 unique values for `substrate` and 6 cans.
 
 
 
@@ -132,10 +132,14 @@ For the sake of documentation and reproducibility, the current report was render
  import        1.2.0   2020-09-24 [1] CRAN (R 4.0.2)
  knitr       * 1.31    2021-01-27 [1] CRAN (R 4.0.3)
  labeling      0.4.2   2020-10-20 [1] CRAN (R 4.0.3)
+ lattice       0.20-41 2020-04-02 [4] CRAN (R 4.0.0)
  lifecycle     0.2.0   2020-03-06 [1] CRAN (R 4.0.0)
  magrittr      2.0.1   2020-11-17 [1] CRAN (R 4.0.3)
+ Matrix        1.2-18  2019-11-27 [4] CRAN (R 4.0.0)
  memoise       1.1.0   2017-04-21 [1] CRAN (R 4.0.0)
+ mgcv          1.8-33  2020-08-27 [4] CRAN (R 4.0.2)
  munsell       0.5.0   2018-06-12 [1] CRAN (R 4.0.0)
+ nlme          3.1-152 2021-02-04 [1] CRAN (R 4.0.3)
  pillar        1.4.6   2020-07-10 [1] CRAN (R 4.0.2)
  pkgbuild      1.2.0   2020-12-15 [1] CRAN (R 4.0.3)
  pkgconfig     2.0.3   2019-09-22 [1] CRAN (R 4.0.0)
@@ -172,4 +176,4 @@ For the sake of documentation and reproducibility, the current report was render
 
 
 
-Report rendered by wibeasley at 2021-02-18, 21:14 -0600 in 1 seconds.
+Report rendered by wibeasley at 2021-02-18, 21:54 -0600 in 2 seconds.
