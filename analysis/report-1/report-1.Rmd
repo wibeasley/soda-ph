@@ -38,7 +38,7 @@ opts_chunk$set(
 echo_chunks    <- FALSE # Toggle for debugging.
 message_chunks <- FALSE # Toggle for debugging.
 # options(width=100) # So the output is 25% wider than the default.
-read_chunk("./analysis/car-report-1/car-report-1.R") # This allows knitr to call chunks tagged in the underlying *.R file.
+read_chunk("./analysis/report-1/report-1.R") # This allows knitr to call chunks tagged in the underlying *.R file.
 ```
 
 <!-- Load 'sourced' R files.  Suppress the output when loading sources. -->
@@ -74,21 +74,15 @@ Summary {.tabset .tabset-fade .tabset-pills}
 Notes
 ---------------------------------------------------------------------------
 
-1. The current report covers `r nrow(ds)` cars, with `r dplyr::n_distinct(ds$carburetor_count_f)` unique values for `carburetor_count`.
-1. The Seattle track's phluguerstometer was producing flaky negative values; it's measurements have been dropped.
+1. The current report covers `r nrow(ds)` sampling points, with `r dplyr::n_distinct(ds$substrate)` unique values for `substrate` and `r dplyr::n_distinct(ds$can)` cans.
+
 
 
 Unanswered Questions
 ---------------------------------------------------------------------------
 
-1. What does `VS` stand for?  How was it measured?
-1. Where the cars at the Philly track measured with the same phluguerstometer and the Cleveland track?
-
-
 Answered Questions
 ---------------------------------------------------------------------------
-
-1. The Seattle track's phluguerstometer was producing flaky negative values; it's measurements have been dropped.
 
 
 Graphs
@@ -102,10 +96,10 @@ Marginals
 ```
 
 
-Scatterplots
+Spaghetti Plots
 ---------------------------------------------------------------------------
 
-```{r scatterplots, echo=echo_chunks, message=message_chunks, fig.width=7}
+```{r spaghetti, echo=echo_chunks, message=message_chunks, fig.width=7}
 ```
 
 
@@ -124,7 +118,7 @@ Final Model
 ```{r model-results-table, echo=echo_chunks, message=message_chunks, warning=TRUE}
 ```
 
-In the model that includes two predictors, the slope coefficent of `Miles per gallon` is `r summary(m2)$coefficients[2,1]`.
+In the model that includes two predictors, the slope coefficent of `Miles per gallon` is r summary(m2)$coefficients[2,1].
 
 
 Session Information {#session-info}

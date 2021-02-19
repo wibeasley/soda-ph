@@ -22,6 +22,11 @@ options(show.signif.stars=F) #Turn off the annotations on p-values
 
 path_input <- "data-public/raw/sample.csv"
 
+palette_dark <- c(
+  "Pepsi"       = "#004B93", # https://usbrandcolors.com/pepsi-colors/
+  "Coke"        = "#F40009", # https://usbrandcolors.com/coca-cola-colors
+  "Dr. Pepper"  = "#711F25"  # https://brandpalettes.com/dr-pepper-color-codes/
+)
 
 # Execute to specify the column types.  It might require some manual adjustment (eg doubles to integers).
 #   OuhscMunge::readr_spec_aligned(path_input)
@@ -63,6 +68,7 @@ ggplot(ds, aes(x=duration_min, y=ph, group=can, color=substrate, label=can_index
   # geom_smooth(method="loess", span=2) +
   geom_line(alpha = .6) +
   geom_text(alpha = .6) +
+  scale_color_manual(values = palette_dark) +
   theme_light() +
   theme(axis.ticks = element_blank()) +
   labs(
