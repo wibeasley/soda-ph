@@ -1,4 +1,4 @@
-substrate,sample_index,duration_min,temp_c,ph
+substrate,can_index,duration_min,temp_c,ph
 Coke,1,0,21,2.9
 Coke,1,20,20,2.5
 Coke,1,40,20,2.4
