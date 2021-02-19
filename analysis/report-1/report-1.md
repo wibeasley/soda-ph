@@ -43,7 +43,9 @@ Summary {.tabset .tabset-fade .tabset-pills}
 Notes
 ---------------------------------------------------------------------------
 
-1. The current report covers 42 sampling points, with 2 unique values for `substrate` and 6 cans.
+1. Maya's current report covers 42 sampling points, with 2 unique values for `substrate` and 6 cans.
+
+1. Valencia's current report covers 18 sampling points, with 3 unique values for `substrate` and 9 cans.
 
 
 
@@ -64,10 +66,21 @@ Marginals
 
 
 
-Spaghetti Plots
+Spaghetti Plots - Maya
 ---------------------------------------------------------------------------
+The first plot contains 6 faint spaghetti strands, each representing a single can's longitudinal trajectory.  Each substrate is assigned a distinct color.  Each substrate has three independent cans, indicated by the plotted digits 1, 2, 3.  Each substrate is summarized by a thick [loess](https://en.wikipedia.org/wiki/Local_regression) curve to capture any nonlinear trend.
 
-![](figure-png/spaghetti-1.png)<!-- -->
+The second plot is faceted to better inspect patterns within substrate.
+
+![](figure-png/spaghetti-maya-1.png)<!-- -->![](figure-png/spaghetti-maya-2.png)<!-- -->
+
+Spaghetti Plots - Valencia
+---------------------------------------------------------------------------
+The first plot contains 9 faint spaghetti strands, each representing a single can's longitudinal trajectory.  Each substrate is assigned a distinct color.  Each substrate has two independent cans, indicated by the plotted digits 1, 2.  Each substrate is summarized by a thick [ regression](https://en.wikipedia.org/wiki/General_linear_model) line to capture any linear trend.
+
+The second plot is faceted to better inspect patterns within substrate.
+
+![](figure-png/spaghetti-valencia-1.png)<!-- -->![](figure-png/spaghetti-valencia-2.png)<!-- -->
 
 
 Models
@@ -176,4 +189,4 @@ For the sake of documentation and reproducibility, the current report was render
 
 
 
-Report rendered by wibeasley at 2021-02-18, 21:54 -0600 in 2 seconds.
+Report rendered by wibeasley at 2021-02-18, 23:02 -0600 in 3 seconds.

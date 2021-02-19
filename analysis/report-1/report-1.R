@@ -20,7 +20,8 @@ options(show.signif.stars=F) #Turn off the annotations on p-values
 # path_input                  <- config$path_car_derived
 # Uncomment the lines above and delete the one below if value is stored in 'config.yml'.
 
-path_input <- "data-public/raw/sample.csv"
+path_input_maya     <- "data-public/raw/sample-maya.csv"
+path_input_valencia <- "data-public/raw/sample-valencia.csv"
 
 palette_dark <- c(
   "Pepsi"       = "#004B93", # https://usbrandcolors.com/pepsi-colors/
@@ -29,26 +30,40 @@ palette_dark <- c(
 )
 
 # Execute to specify the column types.  It might require some manual adjustment (eg doubles to integers).
-#   OuhscMunge::readr_spec_aligned(path_input)
-col_types <- readr::cols_only(
+#   OuhscMunge::readr_spec_aligned(path_input_maya)
+col_types_maya <- readr::cols_only(
     substrate            = readr::col_character(),
     can_index            = readr::col_integer(),
     duration_min         = readr::col_integer(),
-    temp_c               = readr::col_integer(),
+    temp_c               = readr::col_double(),
+    ph                   = readr::col_double()
+)
+#   OuhscMunge::readr_spec_aligned(path_input_valencia)
+col_types_valencia <- readr::cols_only(
+    substrate            = readr::col_character(),
+    can_index            = readr::col_integer(),
+    temp_c               = readr::col_double(),
     ph                   = readr::col_double()
 )
 
 # ---- load-data ---------------------------------------------------------------
-ds <- readr::read_csv(path_input, col_types = col_types) # 'ds' stands for 'datasets'
+ds_maya     <- readr::read_csv(path_input_maya    , col_types = col_types_maya)
+ds_valencia <- readr::read_csv(path_input_valencia, col_types = col_types_valencia)
 
 # ---- tweak-data --------------------------------------------------------------
-ds <-
-  ds %>%
+ds_maya <-
+  ds_maya %>%
   dplyr::mutate(
     can = paste(substrate, can_index)
   ) %>%
   dplyr::filter(substrate != "Dr. Pepper")
-#
+
+ds_valencia <-
+  ds_valencia %>%
+  dplyr::mutate(
+    can = paste(substrate, can_index)
+  )
+
 # checkmate::assert_factor(   ds$forward_gear_count_f         , any.missing=F                           )
 # checkmate::assert_factor(   ds$carburetor_count_f           , any.missing=F                           )
 # checkmate::assert_numeric(  ds$horsepower_by_gear_count_3   , any.missing=F , lower=   0, upper=   0  )
@@ -64,8 +79,9 @@ ds <-
 # histogram_discrete(d_observed=ds, variable_name="carburetor_count_f")
 # histogram_discrete(d_observed=ds, variable_name="forward_gear_count_f")
 
-# ---- spaghetti ------------------------------------------------------------
-ggplot(ds, aes(x=duration_min, y=ph, group=can, color=substrate, label=can_index)) +
+# ---- spaghetti-maya ------------------------------------------------------------
+ds_maya %>%
+  ggplot(aes(x=duration_min, y=ph, group=can, color=substrate, label=can_index)) +
   geom_smooth(aes(group = substrate),  method="loess", span=2, se = F) +
   geom_line(alpha = .4) +
   geom_text(alpha = .4, show.legend = FALSE) +
@@ -77,13 +93,42 @@ ggplot(ds, aes(x=duration_min, y=ph, group=can, color=substrate, label=can_index
   theme(legend.justification = c(1, 1)) +
   theme(legend.background  = element_blank()) +
   labs(
-    title   = "pH over Time",
+    title   = NULL,
     x       = "Duration (min)",
     y       = "pH",
     color   = NULL
   )
 
+last_plot() +
+  facet_wrap(~substrate) +
+  theme_light() +
+  theme(legend.position = "none")
 
+# ---- spaghetti-valencia ------------------------------------------------------------
+ds_valencia %>%
+  ggplot(aes(x=temp_c, y=ph, group=can, color=substrate, label=can_index)) +
+  # geom_smooth(aes(group = substrate),  method="loess", span=2, se = F) +
+  geom_line(alpha = .4) +
+  geom_text(alpha = .4, show.legend = FALSE) +
+  scale_color_manual(values = palette_dark) +
+  guides(color = guide_legend(override.aes = list(alpha = 1))) +
+  theme_minimal() +
+  theme(axis.ticks = element_blank()) +
+  theme(legend.position = c(1, 1)) +
+  theme(legend.justification = c(1, 1)) +
+  theme(legend.background  = element_blank()) +
+  labs(
+    title   = NULL,
+    x       = "Temperatue (C)",
+    y       = "pH",
+    color   = NULL
+  )
+
+last_plot() +
+  facet_wrap(~substrate) +
+  geom_smooth(aes(group = substrate),  method="lm", span=3, se = F) +
+  theme_light() +
+  theme(legend.position = "none")
 
 # # ---- models ------------------------------------------------------------------
 # cat("============= Simple model that's just an intercept. =============")

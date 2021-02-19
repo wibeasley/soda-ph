@@ -74,7 +74,9 @@ Summary {.tabset .tabset-fade .tabset-pills}
 Notes
 ---------------------------------------------------------------------------
 
-1. The current report covers `r nrow(ds)` sampling points, with `r dplyr::n_distinct(ds$substrate)` unique values for `substrate` and `r dplyr::n_distinct(ds$can)` cans.
+1. Maya's current report covers `r nrow(ds_maya)` sampling points, with `r dplyr::n_distinct(ds_maya$substrate)` unique values for `substrate` and `r dplyr::n_distinct(ds_maya$can)` cans.
+
+1. Valencia's current report covers `r nrow(ds_valencia)` sampling points, with `r dplyr::n_distinct(ds_valencia$substrate)` unique values for `substrate` and `r dplyr::n_distinct(ds_valencia$can)` cans.
 
 
 
@@ -96,10 +98,22 @@ Marginals
 ```
 
 
-Spaghetti Plots
+Spaghetti Plots - Maya
 ---------------------------------------------------------------------------
+The first plot contains `r dplyr::n_distinct(ds_maya$can)` faint spaghetti strands, each representing a single can's longitudinal trajectory.  Each substrate is assigned a distinct color.  Each substrate has three independent cans, indicated by the plotted digits 1, 2, 3.  Each substrate is summarized by a thick [loess](https://en.wikipedia.org/wiki/Local_regression) curve to capture any nonlinear trend.
 
-```{r spaghetti, echo=echo_chunks, message=message_chunks, fig.width=7}
+The second plot is faceted to better inspect patterns within substrate.
+
+```{r spaghetti-maya, echo=echo_chunks, message=message_chunks, fig.width=7}
+```
+
+Spaghetti Plots - Valencia
+---------------------------------------------------------------------------
+The first plot contains `r dplyr::n_distinct(ds_valencia$can)` faint spaghetti strands, each representing a single can's longitudinal trajectory.  Each substrate is assigned a distinct color.  Each substrate has two independent cans, indicated by the plotted digits 1, 2.  Each substrate is summarized by a thick [ regression](https://en.wikipedia.org/wiki/General_linear_model) line to capture any linear trend.
+
+The second plot is faceted to better inspect patterns within substrate.
+
+```{r spaghetti-valencia, echo=echo_chunks, message=message_chunks, fig.width=7}
 ```
 
 
