@@ -1,6 +1,6 @@
 ---
-title: Skeleton Report 1
-date: "Date: 2021-02-18"
+title: Carbonated Drink pH over Time and Temperature
+date: "Date: 2021-02-20"
 output:
   # radix::radix_article: # radix is a newer alternative that has some advantages over `html_document`.
   html_document:
@@ -11,7 +11,7 @@ output:
     css: ../common/styles.css         # analysis/common/styles.css
 ---
 
-This report covers the analyses used in the ZZZ project (Marcus Mark, PI).
+This report covers the analyses usedby Maya & Valencia.
 
 <!--  Set the working directory to the repository's base directory; this assumes the report is nested inside of two directories.-->
 
@@ -76,7 +76,7 @@ The second plot is faceted to better inspect patterns within substrate.
 
 Spaghetti Plots - Valencia
 ---------------------------------------------------------------------------
-The first plot contains 9 faint spaghetti strands, each representing a single can's longitudinal trajectory.  Each substrate is assigned a distinct color.  Each substrate has two independent cans, indicated by the plotted digits 1, 2.  Each substrate is summarized by a thick [ regression](https://en.wikipedia.org/wiki/General_linear_model) line to capture any linear trend.
+The first plot contains 9 faint spaghetti strands, each representing a single can's relationship between temperature and pH.  Each substrate is assigned a distinct color.  Each substrate has three independent cans, indicated by the plotted digits 1, 2, 3.  Each substrate is summarized by a thick [regression](https://en.wikipedia.org/wiki/General_linear_model) line to capture any linear trend.
 
 The second plot is faceted to better inspect patterns within substrate.
 
@@ -118,42 +118,48 @@ For the sake of documentation and reproducibility, the current report was render
  collate  en_US.UTF-8                 
  ctype    en_US.UTF-8                 
  tz       America/Chicago             
- date     2021-02-18                  
+ date     2021-02-20                  
 
 ─ Packages ───────────────────────────────────────────────────────────────────
  package     * version date       lib source        
  assertthat    0.2.1   2019-03-21 [1] CRAN (R 4.0.0)
+ bslib         0.2.4   2021-01-25 [1] CRAN (R 4.0.3)
+ cachem        1.0.4   2021-02-13 [1] CRAN (R 4.0.3)
  callr         3.5.1   2020-10-13 [1] CRAN (R 4.0.3)
  cli           2.3.0   2021-01-31 [1] CRAN (R 4.0.3)
  colorspace    2.0-0   2020-11-11 [1] CRAN (R 4.0.3)
  crayon        1.4.1   2021-02-08 [1] CRAN (R 4.0.3)
+ DBI           1.1.1   2021-01-15 [1] CRAN (R 4.0.3)
  desc          1.2.0   2018-05-01 [1] CRAN (R 4.0.0)
  devtools      2.3.2   2020-09-18 [1] CRAN (R 4.0.2)
  digest        0.6.27  2020-10-24 [1] CRAN (R 4.0.3)
- dplyr         1.0.2   2020-08-18 [1] CRAN (R 4.0.2)
+ dplyr         1.0.4   2021-02-02 [1] CRAN (R 4.0.3)
  ellipsis      0.3.1   2020-05-15 [1] CRAN (R 4.0.0)
  evaluate      0.14    2019-05-28 [1] CRAN (R 4.0.0)
  farver        2.0.3   2020-01-16 [1] CRAN (R 4.0.0)
+ fastmap       1.1.0   2021-01-25 [1] CRAN (R 4.0.3)
  fs            1.5.0   2020-07-31 [1] CRAN (R 4.0.2)
  generics      0.1.0   2020-10-31 [1] CRAN (R 4.0.3)
- ggplot2     * 3.3.2   2020-06-19 [1] CRAN (R 4.0.1)
+ ggplot2     * 3.3.3   2020-12-30 [1] CRAN (R 4.0.3)
  glue          1.4.2   2020-08-27 [1] CRAN (R 4.0.2)
  gtable        0.3.0   2019-03-25 [1] CRAN (R 4.0.0)
  highr         0.8     2019-03-20 [1] CRAN (R 4.0.0)
  hms           1.0.0   2021-01-13 [1] CRAN (R 4.0.3)
  htmltools     0.5.1.1 2021-01-22 [1] CRAN (R 4.0.3)
  import        1.2.0   2020-09-24 [1] CRAN (R 4.0.2)
+ jquerylib     0.1.3   2020-12-17 [1] CRAN (R 4.0.3)
+ jsonlite      1.7.2   2020-12-09 [1] CRAN (R 4.0.3)
  knitr       * 1.31    2021-01-27 [1] CRAN (R 4.0.3)
  labeling      0.4.2   2020-10-20 [1] CRAN (R 4.0.3)
  lattice       0.20-41 2020-04-02 [4] CRAN (R 4.0.0)
- lifecycle     0.2.0   2020-03-06 [1] CRAN (R 4.0.0)
+ lifecycle     1.0.0   2021-02-15 [1] CRAN (R 4.0.3)
  magrittr      2.0.1   2020-11-17 [1] CRAN (R 4.0.3)
  Matrix        1.2-18  2019-11-27 [4] CRAN (R 4.0.0)
- memoise       1.1.0   2017-04-21 [1] CRAN (R 4.0.0)
+ memoise       2.0.0   2021-01-26 [1] CRAN (R 4.0.3)
  mgcv          1.8-33  2020-08-27 [4] CRAN (R 4.0.2)
  munsell       0.5.0   2018-06-12 [1] CRAN (R 4.0.0)
  nlme          3.1-152 2021-02-04 [1] CRAN (R 4.0.3)
- pillar        1.4.6   2020-07-10 [1] CRAN (R 4.0.2)
+ pillar        1.4.7   2020-11-20 [1] CRAN (R 4.0.3)
  pkgbuild      1.2.0   2020-12-15 [1] CRAN (R 4.0.3)
  pkgconfig     2.0.3   2019-09-22 [1] CRAN (R 4.0.0)
  pkgload       1.1.0   2020-05-29 [1] CRAN (R 4.0.0)
@@ -165,16 +171,17 @@ For the sake of documentation and reproducibility, the current report was render
  readr         1.4.0   2020-10-05 [1] CRAN (R 4.0.3)
  remotes       2.2.0   2020-07-21 [1] CRAN (R 4.0.2)
  rlang         0.4.10  2020-12-30 [1] CRAN (R 4.0.3)
- rmarkdown     2.5     2020-10-21 [1] CRAN (R 4.0.3)
+ rmarkdown     2.7     2021-02-19 [1] CRAN (R 4.0.3)
  rprojroot     2.0.2   2020-11-15 [1] CRAN (R 4.0.3)
+ sass          0.3.1   2021-01-24 [1] CRAN (R 4.0.3)
  scales        1.1.1   2020-05-11 [1] CRAN (R 4.0.0)
  sessioninfo   1.1.1   2018-11-05 [1] CRAN (R 4.0.0)
  stringi       1.5.3   2020-09-09 [1] CRAN (R 4.0.2)
  stringr       1.4.0   2019-02-10 [1] CRAN (R 4.0.0)
- testthat      3.0.0   2020-10-31 [1] CRAN (R 4.0.3)
- tibble        3.0.4   2020-10-12 [1] CRAN (R 4.0.3)
+ testthat      3.0.2   2021-02-14 [1] CRAN (R 4.0.3)
+ tibble        3.0.6   2021-01-29 [1] CRAN (R 4.0.3)
  tidyselect    1.1.0   2020-05-11 [1] CRAN (R 4.0.0)
- usethis       1.6.3   2020-09-17 [1] CRAN (R 4.0.2)
+ usethis       2.0.1   2021-02-10 [1] CRAN (R 4.0.3)
  vctrs         0.3.6   2020-12-17 [1] CRAN (R 4.0.3)
  withr         2.4.1   2021-01-26 [1] CRAN (R 4.0.3)
  xfun          0.21    2021-02-10 [1] CRAN (R 4.0.3)
@@ -189,4 +196,4 @@ For the sake of documentation and reproducibility, the current report was render
 
 
 
-Report rendered by wibeasley at 2021-02-18, 23:02 -0600 in 3 seconds.
+Report rendered by wibeasley at 2021-02-20, 13:38 -0600 in 4 seconds.

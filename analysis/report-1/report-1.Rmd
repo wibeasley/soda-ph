@@ -1,5 +1,5 @@
 ---
-title: Skeleton Report 1
+title: Carbonated Drink pH over Time and Temperature
 date: "Date: `r Sys.Date()`"
 output:
   # radix::radix_article: # radix is a newer alternative that has some advantages over `html_document`.
@@ -11,7 +11,7 @@ output:
     css: ../common/styles.css         # analysis/common/styles.css
 ---
 
-This report covers the analyses used in the ZZZ project (Marcus Mark, PI).
+This report covers the analyses usedby Maya & Valencia.
 
 <!--  Set the working directory to the repository's base directory; this assumes the report is nested inside of two directories.-->
 ```{r, echo=F, message=F}
@@ -109,7 +109,7 @@ The second plot is faceted to better inspect patterns within substrate.
 
 Spaghetti Plots - Valencia
 ---------------------------------------------------------------------------
-The first plot contains `r dplyr::n_distinct(ds_valencia$can)` faint spaghetti strands, each representing a single can's longitudinal trajectory.  Each substrate is assigned a distinct color.  Each substrate has two independent cans, indicated by the plotted digits 1, 2.  Each substrate is summarized by a thick [ regression](https://en.wikipedia.org/wiki/General_linear_model) line to capture any linear trend.
+The first plot contains `r dplyr::n_distinct(ds_valencia$can)` faint spaghetti strands, each representing a single can's relationship between temperature and pH.  Each substrate is assigned a distinct color.  Each substrate has three independent cans, indicated by the plotted digits 1, 2, 3.  Each substrate is summarized by a thick [regression](https://en.wikipedia.org/wiki/General_linear_model) line to capture any linear trend.
 
 The second plot is faceted to better inspect patterns within substrate.
 
