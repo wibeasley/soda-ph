@@ -104,12 +104,13 @@ last_plot() +
   theme_light() +
   theme(legend.position = "none")
 
-# ---- spaghetti-valencia ------------------------------------------------------------
+# ---- scatter-valencia ------------------------------------------------------------
 ds_valencia %>%
   ggplot(aes(x=temp_c, y=ph, group=can, color=substrate, label=can_index)) +
   # geom_smooth(aes(group = substrate),  method="loess", span=2, se = F) +
-  geom_line(alpha = .4) +
-  geom_text(alpha = .4, show.legend = FALSE) +
+  geom_smooth(aes(group = substrate),  method="lm", span=2, se = F) +
+  # geom_point(alpha = .4) +
+  geom_text(alpha = .8, show.legend = FALSE) +
   scale_color_manual(values = palette_dark) +
   guides(color = guide_legend(override.aes = list(alpha = 1))) +
   theme_minimal() +
@@ -126,7 +127,7 @@ ds_valencia %>%
 
 last_plot() +
   facet_wrap(~substrate) +
-  geom_smooth(aes(group = substrate),  method="lm", span=3, se = F) +
+  # geom_smooth(aes(group = substrate),  method="lm", span=3, se = F) +
   theme_light() +
   theme(legend.position = "none")
 

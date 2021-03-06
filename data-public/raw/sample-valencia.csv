@@ -2,18 +2,18 @@ substrate,can_index,temp_c,ph
 Coke,1,10.5,3.5
 Coke,2,10,3.8
 Coke,3,10,3.5
-Coke,1,6.5,2.6
-Coke,2,5,2.6
-Coke,3,4.5,2.7
+Coke,4,6.5,2.6
+Coke,5,5,2.6
+Coke,6,4.5,2.7
 Pepsi,1,21,2.7
 Pepsi,2,20.8,2.7
 Pepsi,3,20.5,2.8
-Pepsi,1,8,2.9
-Pepsi,2,7.5,2.7
-Pepsi,3,6,2.8
+Pepsi,4,8,2.9
+Pepsi,5,7.5,2.7
+Pepsi,6,6,2.8
 Dr. Pepper,1,21,2.9
 Dr. Pepper,2,20.5,2.6
 Dr. Pepper,3,20.5,2.9
-Dr. Pepper,1,8,3
-Dr. Pepper,2,7,3.1
-Dr. Pepper,3,7,3.1
+Dr. Pepper,4,8,3
+Dr. Pepper,5,7,3.1
+Dr. Pepper,6,7,3.1

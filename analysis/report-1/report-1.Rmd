@@ -107,13 +107,13 @@ The second plot is faceted to better inspect patterns within substrate.
 ```{r spaghetti-maya, echo=echo_chunks, message=message_chunks, fig.width=7}
 ```
 
-Spaghetti Plots - Valencia
+Scatter Plots - Valencia
 ---------------------------------------------------------------------------
-The first plot contains `r dplyr::n_distinct(ds_valencia$can)` faint spaghetti strands, each representing a single can's relationship between temperature and pH.  Each substrate is assigned a distinct color.  Each substrate has three independent cans, indicated by the plotted digits 1, 2, 3.  Each substrate is summarized by a thick [regression](https://en.wikipedia.org/wiki/General_linear_model) line to capture any linear trend.
+The first plot contains `r dplyr::n_distinct(ds_valencia$can)` one [regression](https://en.wikipedia.org/wiki/General_linear_model) per substrate, each summarizing the substrate's linear relationship between temperature and pH.  Each substrate is assigned a distinct color and has six independent cans, indicated by the plotted digits 1, 2, ..., 6.
 
 The second plot is faceted to better inspect patterns within substrate.
 
-```{r spaghetti-valencia, echo=echo_chunks, message=message_chunks, fig.width=7}
+```{r scatter-valencia, echo=echo_chunks, message=message_chunks, fig.width=7}
 ```
 
 
