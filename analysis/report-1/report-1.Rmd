@@ -113,7 +113,7 @@ The first plot contains `r dplyr::n_distinct(ds_valencia$can)` one [regression](
 
 The second plot is faceted to better inspect patterns within substrate.
 
-```{r scatter-valencia, echo=echo_chunks, message=message_chunks, fig.width=7}
+```{r scatter-valencia, echo=echo_chunks, message=message_chunks, fig.width=7, fig.height = 8}
 ```
 
 

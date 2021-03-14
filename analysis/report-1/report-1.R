@@ -111,7 +111,7 @@ ds_valencia %>%
   geom_smooth(aes(group = substrate),  method="lm", span=2, se = F) +
   # geom_point(alpha = .4) +
   geom_text(alpha = .8, show.legend = FALSE) +
-  scale_color_manual(values = palette_dark) +
+  # scale_color_manual(values = palette_dark) +
   guides(color = guide_legend(override.aes = list(alpha = 1))) +
   theme_minimal() +
   theme(axis.ticks = element_blank()) +

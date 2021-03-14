@@ -1,6 +1,6 @@
 ---
 title: Carbonated Drink pH over Time and Temperature
-date: "Date: 2021-03-06"
+date: "Date: 2021-03-14"
 output:
   # radix::radix_article: # radix is a newer alternative that has some advantages over `html_document`.
   html_document:
@@ -45,7 +45,7 @@ Notes
 
 1. Maya's current report covers 42 sampling points, with 2 unique values for `substrate` and 6 cans.
 
-1. Valencia's current report covers 18 sampling points, with 3 unique values for `substrate` and 18 cans.
+1. Valencia's current report covers 84 sampling points, with 14 unique values for `substrate` and 84 cans.
 
 
 
@@ -76,11 +76,28 @@ The second plot is faceted to better inspect patterns within substrate.
 
 Scatter Plots - Valencia
 ---------------------------------------------------------------------------
-The first plot contains 18 one [regression](https://en.wikipedia.org/wiki/General_linear_model) per substrate, each summarizing the substrate's linear relationship between temperature and pH.  Each substrate is assigned a distinct color and has six independent cans, indicated by the plotted digits 1, 2, ..., 6.
+The first plot contains 84 one [regression](https://en.wikipedia.org/wiki/General_linear_model) per substrate, each summarizing the substrate's linear relationship between temperature and pH.  Each substrate is assigned a distinct color and has six independent cans, indicated by the plotted digits 1, 2, ..., 6.
 
 The second plot is faceted to better inspect patterns within substrate.
 
-![](figure-png/scatter-valencia-1.png)<!-- -->![](figure-png/scatter-valencia-2.png)<!-- -->
+
+```
+Warning: Removed 1 rows containing non-finite values (stat_smooth).
+```
+
+```
+Warning: Removed 1 rows containing missing values (geom_text).
+```
+
+![](figure-png/scatter-valencia-1.png)<!-- -->
+
+```
+Warning: Removed 1 rows containing non-finite values (stat_smooth).
+
+Warning: Removed 1 rows containing missing values (geom_text).
+```
+
+![](figure-png/scatter-valencia-2.png)<!-- -->
 
 
 Models
@@ -118,7 +135,7 @@ For the sake of documentation and reproducibility, the current report was render
  collate  en_US.UTF-8                 
  ctype    en_US.UTF-8                 
  tz       America/Chicago             
- date     2021-03-06                  
+ date     2021-03-14                  
 
 ─ Packages ───────────────────────────────────────────────────────────────────
  package     * version    date       lib source                       
@@ -199,4 +216,4 @@ For the sake of documentation and reproducibility, the current report was render
 
 
 
-Report rendered by wibeasley at 2021-03-06, 10:15 -0600 in 3 seconds.
+Report rendered by wibeasley at 2021-03-14, 16:27 -0500 in 6 seconds.
