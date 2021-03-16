@@ -24,9 +24,26 @@ path_input_maya     <- "data-public/raw/sample-maya.csv"
 path_input_valencia <- "data-public/raw/sample-valencia.csv"
 
 palette_dark <- c(
-  "Pepsi"       = "#004B93", # https://usbrandcolors.com/pepsi-colors/
-  "Coke"        = "#F40009", # https://usbrandcolors.com/coca-cola-colors
-  "Dr. Pepper"  = "#711F25"  # https://brandpalettes.com/dr-pepper-color-codes/
+  "A&W"                         = "#4F2400"  # https://brandpalettes.com/aw-root-beer-color-codes/
+  ,"Coke"                       = "#F40009"  # https://usbrandcolors.com/coca-cola-colors
+  ,"Dr. Pepper"                 = "#711F25"  # https://brandpalettes.com/dr-pepper-color-codes/
+  ,"Pepsi"                      = "#004B93"  # https://usbrandcolors.com/pepsi-colors/
+  ,"Crush"                      = "#fe9820"  # https://colorpicker.me/#fe9820
+  ,"Canada Dry"                 = "#238321"  # https://colorpicker.me/#238321
+  ,"Cream Soda"                 = "#0f4557"  # https://colorpicker.me/#0f4557
+  ,"Mtn. Dew"                   = "#94C93D"  # https://brandpalettes.com/mountain-dew-color-codes/
+  ,"Mug Rootbeer"               = "#5A341F"  # https://brandpalettes.com/mug-root-beer-color-codes/
+  ,"Cherry Bubly"               = "990014"   # https://colorpicker.me/#0f4557
+  ,"Fresca"                     = "#6dc8e2"  # https://colorpicker.me/#6dc8e2
+  ,"San Pelligrino"             = "#d5a4d1"  # https://colorpicker.me/#d5a4d1
+  ,"Perrier"                    = "#0f692b"  # https://colorpicker.me/#0f692b
+  ,"La Croix"                   = "#d4c82c"  # https://colorpicker.me/#d4c82c
+  ,"Spindrift"                  = "#10aaac"  # https://colorpicker.me/#10aaac
+  ,"Izze(blackberry)"           = "#87265d"  # https://colorpicker.me/#87265d
+  ,"Topo Chico"                 = "#ded03b"  # https://colorpicker.me/#ded03b
+  ,"Voss"                       = "#80ba72"  # https://colorpicker.me/#80ba72
+  ,"Fever-tree(ginger ale)"     = "#617242"  # https://colorpicker.me/#617242
+  ,"Best choice(strawberry)"    = "#14c3b3"  # https://colorpicker.me/#14c3b3
 )
 
 # Execute to specify the column types.  It might require some manual adjustment (eg doubles to integers).
@@ -108,15 +125,16 @@ last_plot() +
 ds_valencia %>%
   ggplot(aes(x=temp_c, y=ph, group=can, color=substrate, label=can_index)) +
   # geom_smooth(aes(group = substrate),  method="loess", span=2, se = F) +
-  geom_smooth(aes(group = substrate),  method="lm", span=2, se = F) +
+  geom_smooth(aes(group = substrate),  method="lm", formula = "y ~ x", se = F, na.rm = T) +
   # geom_point(alpha = .4) +
-  geom_text(alpha = .8, show.legend = FALSE) +
-  # scale_color_manual(values = palette_dark) +
+  geom_text(alpha = .8, show.legend = FALSE, na.rm = T) +
+  scale_color_manual(values = palette_dark) +
   guides(color = guide_legend(override.aes = list(alpha = 1))) +
   theme_minimal() +
   theme(axis.ticks = element_blank()) +
-  theme(legend.position = c(1, 1)) +
-  theme(legend.justification = c(1, 1)) +
+  theme(legend.position = "right") +
+  # theme(legend.position = c(1, 1)) +
+  # theme(legend.justification = c(1, 1)) +
   theme(legend.background  = element_blank()) +
   labs(
     title   = NULL,
