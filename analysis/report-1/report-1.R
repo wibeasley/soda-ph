@@ -29,11 +29,13 @@ palette_dark <- c(
   ,"Dr. Pepper"                 = "#711F25"  # https://brandpalettes.com/dr-pepper-color-codes/
   ,"Pepsi"                      = "#004B93"  # https://usbrandcolors.com/pepsi-colors/
   ,"Crush"                      = "#fe9820"  # https://colorpicker.me/#fe9820
+  ,"Orange Crush"               = "#fe9820"  # https://colorpicker.me/#fe9820
   ,"Canada Dry"                 = "#238321"  # https://colorpicker.me/#238321
   ,"Cream Soda"                 = "#0f4557"  # https://colorpicker.me/#0f4557
   ,"Mtn. Dew"                   = "#94C93D"  # https://brandpalettes.com/mountain-dew-color-codes/
   ,"Mug Rootbeer"               = "#5A341F"  # https://brandpalettes.com/mug-root-beer-color-codes/
   ,"Cherry Bubly"               = "990014"   # https://colorpicker.me/#0f4557
+  ,"Bubly(Cherry)"              = "990014"   # https://colorpicker.me/#0f4557
   ,"Fresca"                     = "#6dc8e2"  # https://colorpicker.me/#6dc8e2
   ,"San Pelligrino"             = "#d5a4d1"  # https://colorpicker.me/#d5a4d1
   ,"Perrier"                    = "#0f692b"  # https://colorpicker.me/#0f692b
@@ -44,6 +46,7 @@ palette_dark <- c(
   ,"Voss"                       = "#80ba72"  # https://colorpicker.me/#80ba72
   ,"Fever-tree(ginger ale)"     = "#617242"  # https://colorpicker.me/#617242
   ,"Best choice(strawberry)"    = "#14c3b3"  # https://colorpicker.me/#14c3b3
+  ,"Waterloo(Black Cherry)"     = "#8740e5"  # https://colorpicker.me/#8740e5
 )
 
 # Execute to specify the column types.  It might require some manual adjustment (eg doubles to integers).
@@ -99,15 +102,16 @@ ds_valencia <-
 # ---- spaghetti-maya ------------------------------------------------------------
 ds_maya %>%
   ggplot(aes(x=duration_min, y=ph, group=can, color=substrate, label=can_index)) +
-  geom_smooth(aes(group = substrate),  method="loess", span=2, se = F) +
-  geom_line(alpha = .4) +
+  geom_smooth(aes(group = substrate),  method="loess", formula = "y~x", span=2, se = F) +
+  # geom_line(alpha = .4) +
   geom_text(alpha = .4, show.legend = FALSE) +
   scale_color_manual(values = palette_dark) +
   guides(color = guide_legend(override.aes = list(alpha = 1))) +
   theme_minimal() +
   theme(axis.ticks = element_blank()) +
-  theme(legend.position = c(1, 1)) +
-  theme(legend.justification = c(1, 1)) +
+  theme(legend.position = "right") +
+  # theme(legend.position = c(1, 1)) +
+  # theme(legend.justification = c(1, 1)) +
   theme(legend.background  = element_blank()) +
   labs(
     title   = NULL,
@@ -115,6 +119,9 @@ ds_maya %>%
     y       = "pH",
     color   = NULL
   )
+
+last_plot() +
+  geom_line(alpha = .4)
 
 last_plot() +
   facet_wrap(~substrate) +

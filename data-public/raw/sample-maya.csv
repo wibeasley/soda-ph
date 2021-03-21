@@ -41,12 +41,276 @@ Pepsi,100,3,2.5,21
 Pepsi,120,1,2.5,21
 Pepsi,120,2,2.4,21
 Pepsi,120,3,2.4,21
-Dr. Pepper,0,1,2.5,20
-Dr. Pepper,20,1,2.9,19
-Dr. Pepper,40,1,2.5,21
-Dr. Pepper,0,2,2.4,20
-Dr. Pepper,20,2,2.7,20
-Dr. Pepper,40,2,2.5,20
-Dr. Pepper,0,3,2.3,19
-Dr. Pepper,20,3,2.6,21
-Dr. Pepper,40,3,2.5,20
+Cream Soda,0,1,2.8,21
+Cream Soda,0,2,2.8,21
+Cream Soda,0,3,2.8,21
+Cream Soda,20,1,2.8,21
+Cream Soda,20,2,2.7,21
+Cream Soda,20,3,2.7,21
+Cream Soda,40,1,4.5,21
+Cream Soda,40,2,3.2,21
+Cream Soda,40,3,3.1,21
+Cream Soda,60,1,2.8,21
+Cream Soda,60,2,2.8,21
+Cream Soda,60,3,2.8,21
+Cream Soda,80,1,2.8,21
+Cream Soda,80,2,2.8,21
+Cream Soda,80,3,2.8,21
+Cream Soda,100,1,2.7,21
+Cream Soda,100,2,2.8,21
+Cream Soda,100,3,2.8,21
+Cream Soda,120,1,2.7,21
+Cream Soda,120,2,2.7,21
+Cream Soda,120,3,2.7,20
+Mtn. Dew,0,1,3.2,20
+Mtn. Dew,0,2,3.2,20
+Mtn. Dew,0,3,3.3,20
+Mtn. Dew,20,1,3.2,21
+Mtn. Dew,20,2,3.2,20
+Mtn. Dew,20,3,3.2,20
+Mtn. Dew,40,1,3.5,20
+Mtn. Dew,40,2,3.4,20
+Mtn. Dew,40,3,3.4,20
+Mtn. Dew,60,1,3.3,20
+Mtn. Dew,60,2,3.2,20
+Mtn. Dew,60,3,3.3,20
+Mtn. Dew,80,1,3.2,20
+Mtn. Dew,80,2,3.3,21
+Mtn. Dew,80,3,3.3,20
+Mtn. Dew,100,1,3.2,20
+Mtn. Dew,100,2,3.2,20
+Mtn. Dew,100,3,3.2,20
+Mtn. Dew,120,1,3.2,20
+Mtn. Dew,120,2,3.2,20
+Mtn. Dew,120,3,3.2,20
+Canada Dry,0,1,2.9,20
+Canada Dry,0,2,2.7,20
+Canada Dry,0,3,2.8,20
+Canada Dry,20,1,2.9,20
+Canada Dry,20,2,2.9,20
+Canada Dry,20,3,2.9,20
+Canada Dry,40,1,3.1,20
+Canada Dry,40,2,3.1,20
+Canada Dry,40,3,3,20
+Canada Dry,60,1,3.2,20
+Canada Dry,60,2,3.1,20
+Canada Dry,60,3,2.9,20
+Canada Dry,80,1,2.9,20
+Canada Dry,80,2,3,21
+Canada Dry,80,3,2.9,21
+Canada Dry,100,1,2.9,20
+Canada Dry,100,2,2.9,20
+Canada Dry,100,3,2.9,20
+Canada Dry,120,1,2.9,20
+Canada Dry,120,2,2.9,20
+Canada Dry,120,3,2.9,20
+Orange Crush,0,1,3.2,21
+Orange Crush,0,2,3.2,20
+Orange Crush,0,3,3.2,21
+Orange Crush,20,1,3.1,21
+Orange Crush,20,2,3.1,21
+Orange Crush,20,3,3.1,21
+Orange Crush,40,1,3.1,21
+Orange Crush,40,2,3.1,20
+Orange Crush,40,3,3.2,20
+Orange Crush,60,1,3.3,21
+Orange Crush,60,2,3.3,21
+Orange Crush,60,3,3.2,21
+Orange Crush,80,1,3.4,21
+Orange Crush,80,2,3.3,21
+Orange Crush,80,3,3.1,21
+Orange Crush,100,1,3.1,21
+Orange Crush,100,2,3.1,21
+Orange Crush,100,3,3.1,21
+Orange Crush,120,1,3.1,21
+Orange Crush,120,2,3.1,21
+Orange Crush,120,3,3.1,21
+Mug Rootbeer,0,1,4,21
+Mug Rootbeer,0,2,4,21
+Mug Rootbeer,0,3,4,20
+Mug Rootbeer,20,1,4,21
+Mug Rootbeer,20,2,4,21
+Mug Rootbeer,20,3,4,21
+Mug Rootbeer,40,1,4.1,21
+Mug Rootbeer,40,2,4.1,20
+Mug Rootbeer,40,3,4.1,21
+Mug Rootbeer,60,1,4,20
+Mug Rootbeer,60,2,3.9,21
+Mug Rootbeer,60,3,3.9,21
+Mug Rootbeer,80,1,4.1,20
+Mug Rootbeer,80,2,4.1,20
+Mug Rootbeer,80,3,4.1,20
+Mug Rootbeer,100,1,4,21
+Mug Rootbeer,100,2,4.1,21
+Mug Rootbeer,100,3,4.1,21
+Mug Rootbeer,120,1,4,20
+Mug Rootbeer,120,2,4,20
+Mug Rootbeer,120,3,4,21
+La Croix,0,1,3.8,21
+La Croix,0,2,3.8,21
+La Croix,0,3,3.8,21
+La Croix,20,1,3.7,20
+La Croix,20,2,3.8,20
+La Croix,20,3,3.7,20
+La Croix,40,1,3.7,21
+La Croix,40,2,4,21
+La Croix,40,3,3.8,21
+La Croix,60,1,3.8,20
+La Croix,60,2,4,20
+La Croix,60,3,3.9,21
+La Croix,80,1,3.6,21
+La Croix,80,2,3.5,21
+La Croix,80,3,4.4,21
+La Croix,100,1,3.9,20
+La Croix,100,2,3.9,20
+La Croix,100,3,3.8,21
+La Croix,120,1,3.9,21
+La Croix,120,2,3.8,20
+La Croix,120,3,3.8,20
+Bubly(Cherry),0,1,4,21
+Bubly(Cherry),0,2,3.8,21
+Bubly(Cherry),0,3,4,21
+Bubly(Cherry),20,1,3.8,20
+Bubly(Cherry),20,2,3.9,20
+Bubly(Cherry),20,3,3.8,20
+Bubly(Cherry),40,1,3.8,20
+Bubly(Cherry),40,2,3.8,20
+Bubly(Cherry),40,3,3.8,20
+Bubly(Cherry),60,1,4,20
+Bubly(Cherry),60,2,4,21
+Bubly(Cherry),60,3,4,21
+Bubly(Cherry),80,1,4.2,21
+Bubly(Cherry),80,2,4.1,21
+Bubly(Cherry),80,3,4,21
+Bubly(Cherry),100,1,4.1,21
+Bubly(Cherry),100,2,4,21
+Bubly(Cherry),100,3,4,21
+Bubly(Cherry),120,1,4.1,21
+Bubly(Cherry),120,2,3.9,21
+Bubly(Cherry),120,3,5.2,21
+San Pelligrino,0,1,5,21
+San Pelligrino,0,2,5,21
+San Pelligrino,0,3,5,21
+San Pelligrino,20,1,5.1,21
+San Pelligrino,20,2,5.1,21
+San Pelligrino,20,3,5.1,20
+San Pelligrino,40,1,5.1,21
+San Pelligrino,40,2,5.1,21
+San Pelligrino,40,3,5.1,21
+San Pelligrino,60,1,5.1,20
+San Pelligrino,60,2,5.1,21
+San Pelligrino,60,3,5.1,21
+San Pelligrino,80,1,4.1,21
+San Pelligrino,80,2,5.2,21
+San Pelligrino,80,3,5.1,21
+San Pelligrino,100,1,5.2,21
+San Pelligrino,100,2,5.1,21
+San Pelligrino,100,3,5.2,21
+San Pelligrino,120,1,5.3,21.1
+San Pelligrino,120,2,5.2,21
+San Pelligrino,120,3,5.2,21
+A&W,0,1,4.6,21
+A&W,0,2,4.5,21
+A&W,0,3,4.6,21
+A&W,20,1,4.5,20
+A&W,20,2,4.7,20
+A&W,20,3,4.6,21
+A&W,40,1,4.6,21
+A&W,40,2,4.6,21
+A&W,40,3,4.6,21
+A&W,60,1,4.5,21
+A&W,60,2,4.6,21
+A&W,60,3,4.6,20
+A&W,80,1,4.5,21
+A&W,80,2,4.6,21
+A&W,80,3,4.6,21
+A&W,100,1,4.6,21
+A&W,100,2,4.6,21
+A&W,100,3,4.7,21
+A&W,120,1,4.6,21
+A&W,120,2,4.7,20.8
+A&W,120,3,4.7,20.5
+Fresca,0,1,3.1,21
+Fresca,0,2,3.2,21
+Fresca,0,3,3.2,21
+Fresca,20,1,3.2,21
+Fresca,20,2,3.2,21
+Fresca,20,3,3.2,21
+Fresca,40,1,3.2,20
+Fresca,40,2,3.2,21
+Fresca,40,3,3.2,21
+Fresca,60,1,3.1,20
+Fresca,60,2,3.1,20
+Fresca,60,3,3.1,20
+Fresca,80,1,3.3,21
+Fresca,80,2,3.2,21
+Fresca,80,3,3.2,21
+Fresca,100,1,3.2,21
+Fresca,100,2,3.2,21
+Fresca,100,3,3.2,21
+Fresca,120,1,3.2,20.9
+Fresca,120,2,3.2,20.9
+Fresca,120,3,3.2,20.1
+Perrier,0,1,5.3,21
+Perrier,0,2,5.3,20
+Perrier,0,3,5.2,21
+Perrier,20,1,5.3,21
+Perrier,20,2,5.3,21
+Perrier,20,3,5.3,21
+Perrier,40,1,5.3,21
+Perrier,40,2,5.4,21
+Perrier,40,3,5.3,21
+Perrier,60,1,5.3,21
+Perrier,60,2,5.4,21
+Perrier,60,3,5.4,21
+Perrier,80,1,5.7,21
+Perrier,80,2,5.6,21
+Perrier,80,3,5.5,21
+Perrier,100,1,5.4,21
+Perrier,100,2,5.5,21
+Perrier,100,3,5.6,21
+Perrier,120,1,5.5,21
+Perrier,120,2,5.5,21
+Perrier,120,3,6.3,21
+Dr. Pepper,0,1,3.4,21
+Dr. Pepper,0,2,3.1,21
+Dr. Pepper,0,3,3,21
+Dr. Pepper,20,1,3,21
+Dr. Pepper,20,2,2.8,21
+Dr. Pepper,20,3,3,21
+Dr. Pepper,40,1,3,21
+Dr. Pepper,40,2,2.7,21
+Dr. Pepper,40,3,2.9,21
+Dr. Pepper,60,1,2.9,21
+Dr. Pepper,60,2,2.7,21
+Dr. Pepper,60,3,2.9,21
+Dr. Pepper,80,1,2.9,21
+Dr. Pepper,80,2,2.7,21
+Dr. Pepper,80,3,2.9,21
+Dr. Pepper,100,1,2.9,21
+Dr. Pepper,100,2,2.6,21
+Dr. Pepper,100,3,2.9,21
+Dr. Pepper,120,1,2.9,21
+Dr. Pepper,120,2,2.6,21
+Dr. Pepper,120,3,2.9,21
+Waterloo(Black Cherry),0,1,4.2,21
+Waterloo(Black Cherry),0,2,4,21
+Waterloo(Black Cherry),0,3,3.9,21
+Waterloo(Black Cherry),20,1,3.7,21
+Waterloo(Black Cherry),20,2,3.9,21
+Waterloo(Black Cherry),20,3,3.7,21
+Waterloo(Black Cherry),40,1,3.6,21
+Waterloo(Black Cherry),40,2,3.9,21
+Waterloo(Black Cherry),40,3,3.7,21
+Waterloo(Black Cherry),60,1,3.6,21
+Waterloo(Black Cherry),60,2,3.9,21
+Waterloo(Black Cherry),60,3,3.6,21
+Waterloo(Black Cherry),80,1,3.6,21
+Waterloo(Black Cherry),80,2,3.8,21
+Waterloo(Black Cherry),80,3,3.6,21
+Waterloo(Black Cherry),100,1,3.6,21
+Waterloo(Black Cherry),100,2,3.6,21
+Waterloo(Black Cherry),100,3,3.8,21
+Waterloo(Black Cherry),120,1,3.6,21
+Waterloo(Black Cherry),120,2,3.9,21
+Waterloo(Black Cherry),120,3,3.6,21
